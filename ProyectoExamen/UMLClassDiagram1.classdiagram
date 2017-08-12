@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="14ade54f-27f2-4648-b805-b87c3673c12d" name="UMLClassDiagram1" linkedPackageId="bd551e9b-9bdb-4cb5-91ba-86404aad4d84" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="3e6cc88f-acd3-4e5b-8a9e-79e6fc7e0bdb">
+      <profileInstance Id="411ecd59-1b0c-45b5-811d-507032d6a402" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9227e6f0-62b0-4a94-a6da-cfe51190d175">
+      <profileInstance Id="f3ba5a4d-f176-44ba-a0cd-f40706483e49" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bad7f48f-5ea1-4ba7-913b-2da81c9dc442" name="Cargo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ce1eaf4d-f847-42eb-8c12-5d10bb458777" />
+        <ownedAttributesInternal>
+          <property Id="04ca36fc-de41-4ff2-a4f6-c047cee05019" name="CodigoCargo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e22aa5f-c461-4491-8e94-303511423fd1" />
+          </property>
+          <property Id="8771b5e8-09b6-4222-8c2e-0b09fb0b2a3f" name="NombreCargo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="47b2374e-3409-4798-b2f2-86d2fc4e1387" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="0dc006d3-d9ce-4677-93ed-0d0683d866c4" name="AgregarCargo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c99dc0d2-5cb8-4b67-9a78-5b2930afd19b" />
+          </operation>
+          <operation Id="47f47329-0871-4929-a457-7fc72a2374ca" name="ModificarCargo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d673a60a-1aec-42f1-b393-4fe2f98e0984" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="10124562-60df-43ee-b54a-15f190408acb" name="Persona" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f35f31d5-1c4a-430f-967c-ef85ce55f559" />
+        <targetEnds>
+          <association Id="dbdb8e43-053a-4c04-a316-c14b6f0355e6" isDerived="false" sourceEndRoleName="Persona" targetEndRoleName="Cargo" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bad7f48f-5ea1-4ba7-913b-2da81c9dc442" LastKnownName="Cargo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="256c1cd1-055f-4ff0-a651-c19d516f7d94" name="Persona" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d6a2b7e0-1295-4c7f-9247-f83116a195ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49902044-9762-46f8-ad16-fbcc96b2a05a" name="Cargo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aaf54f63-9c36-4a8c-8c1a-fabcc35055df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4f18b63d-9bcf-48ae-ad84-5d5b0fa94c2d" />
+          </association>
+          <association Id="19bfd4d9-6c5e-4782-901f-83b4f866ba1e" isDerived="false" sourceEndRoleName="Persona" targetEndRoleName="ExamenAlumno" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8443b650-5eaf-4637-855d-1edc27417a9f" LastKnownName="ExamenAlumno" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="32d37d7a-a8a7-4d90-a798-c28e1551f7dc" name="Persona" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="98165917-5b06-450d-8ef4-29ed03110709" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6245844-23d8-4231-83e1-2c54a312b998" name="ExamenAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="07d473b6-3a19-49cd-846c-22a9f45d33b5" name="Lower" value="N">
+                      <elementDefinition Id="ac9e15b6-de24-42e0-8d0e-854bb60e343f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c60f1306-6faa-4a93-87f7-297f2b9cf7a7" name="Upper" value="N">
+                      <elementDefinition Id="a9f23c07-817d-4f04-a18e-f421b380013c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="1eea6d9c-11de-467e-9c72-dbdd727f6433" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1d9ddacc-4b34-47f0-9a86-84431762dc8b" />
+          </association>
+          <association Id="33861bf6-5082-4236-aa6f-d05c0289f8b5" isDerived="false" sourceEndRoleName="Persona" targetEndRoleName="Balotario" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6364479f-e976-4053-9f2f-658bc4c8841a" LastKnownName="Balotario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="310f2f45-abb3-4998-ab0b-dc20cc67cf4d" name="Persona" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3b67a192-fa2a-4b1e-b33f-c58ac1f41b16" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="674beb42-a35b-4680-a0dd-3efd0337bf18" name="Balotario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="9bce20c6-8a2a-49ea-889a-efed8d6ef479" name="Lower" value="N">
+                      <elementDefinition Id="7d0b37a5-9b57-4a40-a055-0d9a4ab09ca3" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="19213946-1c27-40f9-a173-4e4fe232eab6" name="Upper" value="N">
+                      <elementDefinition Id="468430f3-2d11-4174-9088-1e5e0dc9c207" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="cedfc1d8-613e-497c-b51e-25896d8ee0da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9bc8e601-b1d2-458a-97ff-28382b585fd4" />
+          </association>
+          <association Id="ac3615e6-c5e5-48d9-836e-f560bc58506b" isDerived="false" sourceEndRoleName="Persona" targetEndRoleName="Examen" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e64c3f4f-33f8-4709-b462-936895ef1d12" LastKnownName="Examen" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1282c61-b3b1-488b-84b9-fc37185758be" name="Persona" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bda493e7-5981-4b35-a021-13d11574be17" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7947ac41-6ddc-4bf5-bee2-49fc0f4d79e8" name="Examen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="f6262afa-5855-4eb8-9a15-0d9e00819c43" name="Lower" value="N">
+                      <elementDefinition Id="9ae744a6-968d-47a4-9a4d-9adb16b5d501" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="d0c3049d-60e2-454a-9e83-e5949491cb0b" name="Upper" value="N">
+                      <elementDefinition Id="89a0ef0a-5133-489a-ab88-ffcbecf332d8" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="ae203106-39da-4ad9-8c5d-a7a066a235fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8b1902d9-a537-4bd3-a6bb-6d66f6331e69" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="5f6351fe-f9a6-44df-8973-89909239414f" name="DNI" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="476c09b6-64f4-4156-bbb1-fbd30f6d8ce3" />
+          </property>
+          <property Id="b862faab-cda7-4f3e-b75a-939419eb5ba9" name="Codigo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="20f35ee6-365a-4aae-b3fc-cb5ef5a09eca" />
+          </property>
+          <property Id="b6f84dbc-9857-4455-9a6c-af703cc0170f" name="Nombres" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="80662a98-c9b2-4078-8381-2dbf2be73ef1" />
+          </property>
+          <property Id="123673be-20e5-4c0a-91d6-bf5e5f180cd0" name="ApellidoPaterno" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e1449ed9-b39f-49e4-99a9-bb61757f77fa" />
+          </property>
+          <property Id="d17a7155-b4e5-4536-a905-8b4496645bdb" name="ApellidoMaterno" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2bddfeb6-e038-47a2-b58a-b47ea150812f" />
+          </property>
+          <property Id="45c98be4-4493-4039-a5a5-3e6103db6b4a" name="Telefono" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="036cbcfa-6072-40ed-929a-65ff02658f5a" />
+          </property>
+          <property Id="9ed25eea-3240-4886-81bd-eb338387aba9" name="CodigoCargo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fc6ce2bd-b43d-4eb5-964f-08765d485642" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="0fd6ad3d-aec8-45aa-adef-d49f9679ba77" name="AgregarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="952c02cd-86d9-4f20-a888-6f1bf8638b94" />
+          </operation>
+          <operation Id="57c8db7d-b3c5-4031-ac33-1712dabe8756" name="ModificarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e6865fd8-4acc-447d-a050-e56db25d7604" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8443b650-5eaf-4637-855d-1edc27417a9f" name="ExamenAlumno" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7f9c5904-106d-48e5-8cb6-8826bff64291" />
+        <targetEnds>
+          <association Id="05f44374-9223-45bf-b6dd-dc3ee20726db" isDerived="false" sourceEndRoleName="ExamenAlumno" targetEndRoleName="RespuestaExamenAlumno" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3deab980-4697-4a62-96d9-60b84783508d" LastKnownName="RespuestaExamenAlumno" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1b5dae06-9fda-48f9-9d42-c68fa8fd06e5" name="ExamenAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2edb0bbe-dfa0-4eb6-b5dd-4e1ddd579021" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f38a1304-8d76-49ab-be3c-26fae5ca387a" name="RespuestaExamenAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="fc8b2a97-f6b9-4612-96e3-a59f5e294719" name="Lower" value="N">
+                      <elementDefinition Id="a2c4b503-185c-4bb9-b789-7d770605c239" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ad3ab284-71c9-4bf5-9aee-12d938c3580c" name="Upper" value="N">
+                      <elementDefinition Id="db9a5e20-34dd-4857-8b75-738079b09180" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="cf1f987e-b8f3-48ba-9031-b71470e85718" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7623ece3-ac47-49db-9264-375225b913aa" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="753f31ac-af88-4163-bedb-12df9ded9d67" name="CodigoExamenAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d3882348-e076-4c0d-b0ea-13b5f97fa58f" />
+          </property>
+          <property Id="9e701366-d7cd-419a-81d9-ece197b590a6" name="DNI" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a15029e9-8c14-4ccb-a956-eaf28b98b62e" />
+          </property>
+          <property Id="f947c77b-d5e8-462c-9724-d15ad3b303d6" name="CodigoExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42c5289a-8086-47b4-9b76-8c2b5c29a3bf" />
+          </property>
+          <property Id="0508360f-f95a-4c5b-bc03-cce7a564a605" name="NotaAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="93c67c33-dd95-4e1a-bebd-aa6f778f6249" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b3cdbd72-1815-4e96-85ed-d6ecf1877ebd" name="RegistrarExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e215657b-16dd-4667-858b-4188b0684645" />
+          </operation>
+          <operation Id="81fed76a-7366-441b-af50-7341268d31de" name="RevisarExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed9819a6-dded-4c22-8ba9-d48105a3ef97" />
+          </operation>
+          <operation Id="d17fda06-2263-448c-861a-baffe48078f0" name="ImprimirExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b7f8959-674f-459d-8f5e-48f13c30cb1f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3deab980-4697-4a62-96d9-60b84783508d" name="RespuestaExamenAlumno" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ac7877c3-a45e-4261-85e4-cec02f220643" />
+        <ownedAttributesInternal>
+          <property Id="855434b0-ce46-4a41-876e-74f1ee340352" name="CodigoExamenAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f659a1d8-959b-430e-8cab-c8ef582c7df6" />
+          </property>
+          <property Id="7582ee2c-057e-4602-961d-828a9be99ca0" name="RespuestaExamenAlumno" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="79c22bec-7c1c-4675-a2bd-02e6911c8a41" />
+          </property>
+          <property Id="42c8013c-dc3e-4bf6-b746-133869e61006" name="Correcto" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6f4f014c-7c21-4b61-b33e-645e2395a0e4" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ce2badbf-e44d-471d-8f77-1d33477ff3b5" name="RegistrarRespuesta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cee5fb7d-643f-4481-9c38-84bfdcc9ee25" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6364479f-e976-4053-9f2f-658bc4c8841a" name="Balotario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c2bd6663-2f37-4ea6-9027-c741b56b39d5" />
+        <targetEnds>
+          <association Id="48c69011-b32e-4395-8074-6b76bd02987e" isDerived="false" sourceEndRoleName="Balotario" targetEndRoleName="PreguntaBalotario" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b1df6e43-f046-42b6-9e31-a72178610af4" LastKnownName="PreguntaBalotario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a731114a-17f2-4572-b334-dc7102d3647d" name="Balotario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a0ed262c-8357-4037-8556-b1c5c1d3c71e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6df11db3-f2ca-42e5-ba95-69102e40ad8d" name="PreguntaBalotario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5ed6f746-176d-463c-b194-7b617061e7e1" name="Lower" value="N">
+                      <elementDefinition Id="79e561c3-c3e9-4519-8bdb-7a14fd799a4a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3be17f74-6440-45e2-b83d-e0acd0a3195c" name="Upper" value="N">
+                      <elementDefinition Id="41f56269-8d01-4f0f-9c7d-ece2f522a0be" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="023284ec-6145-49fd-86de-13c50520a4f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cae3816f-8d8a-4413-8efc-c4057136f1f4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ff44aade-3d32-4830-b108-e1649ed7b780" name="CodigoBalotario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9361fdb7-4857-4b72-8387-cd19293709b8" />
+          </property>
+          <property Id="4b027f82-59c5-48d5-81a4-6efe3defe9c7" name="NombreBalotario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f05495d5-e56b-45ff-9374-71a8d35c3612" />
+          </property>
+          <property Id="038cd659-d3ac-4623-a68c-4031d268b46a" name="FechaCreacion" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8b012572-c890-4a50-ae1f-85e038d7405e" />
+          </property>
+          <property Id="3cf98114-df9b-4634-8e3e-748c65346682" name="IndicacionesBalotario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ec43c6ab-daf2-437c-af79-4995f8e01c94" />
+          </property>
+          <property Id="68a6487b-6803-43f2-8090-f611885b6795" name="DNI" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d84c053f-7204-49aa-b260-75863b50df70" />
+          </property>
+          <property Id="29743bbc-7624-4d84-acd3-d3360161002b" name="EstadoBalotario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="860cce2a-5240-4081-94b2-48b90123b8b3" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b368f3e8-8a2a-4396-bf37-d748ff34d894" name="AgregarBalotario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bc5f02c7-3ca3-4f5e-a8af-b1a983657c5b" />
+          </operation>
+          <operation Id="ef84d67e-8756-46a9-a882-d72b32339063" name="ModificarBalotario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="114f1642-0074-4063-8eee-83a328acfd6c" />
+          </operation>
+          <operation Id="1f2444f5-3bcd-4909-99cb-8ead28e8e7f0" name="VisualizarBalotario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4e6b9aab-d638-4e18-bac2-bb5cb72a27af" />
+          </operation>
+          <operation Id="a0a079aa-7fb8-4da9-814a-2ab16e92c7bf" name="ImprimirBalotario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="33cfcfe5-58fb-4868-8ad5-7d939b7e997b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e64c3f4f-33f8-4709-b462-936895ef1d12" name="Examen" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b78cc802-8891-49c3-a328-6d7f0719d966" />
+        <targetEnds>
+          <association Id="1252a42a-acbd-4b1d-8149-83976750df1b" isDerived="false" sourceEndRoleName="Examen" targetEndRoleName="PreguntaExamen" isLeaf="false" isAbstract="false">
+            <classMoniker Id="711081c7-0d05-4eec-809e-d8225cc52497" LastKnownName="PreguntaExamen" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="932197af-7a4e-46cc-89f0-2f1fab300bd4" name="Examen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="646a6184-a100-4147-b20d-8e0e320f9e78" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c6bea87-6b81-4743-b122-8b0f19ceaaba" name="PreguntaExamen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="58d82b84-84f0-429f-8e59-eb8f678bf92b" name="Lower" value="N">
+                      <elementDefinition Id="2e8495b7-9c61-4c14-a8f7-44cbee1aecbb" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="5406d7b0-19ab-4963-a935-f8df0a216de6" name="Upper" value="N">
+                      <elementDefinition Id="1013d151-c197-42fb-a0c6-08e59a2cf5d7" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="69a151ed-a88b-407b-91c0-18313f465ff1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d951e59-d2c9-4c1f-9abf-870913e321ec" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="4ed441bd-8a79-4585-8ec3-46f8b0609b2d" name="CodigoExamen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cdd20e45-465c-4477-92df-ffc7183e220c" />
+          </property>
+          <property Id="03a3f114-b93e-49a4-8959-6e243aff768b" name="NombreExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="61d2cd55-835f-4db9-8a2a-c459d9c3c0d1" />
+          </property>
+          <property Id="1ffa6417-7579-4c76-8660-55ca0ccc3246" name="InicioExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f9c736bc-bf18-4d52-bcf8-db0db8b84124" />
+          </property>
+          <property Id="492a797f-4b34-4e6d-8e8d-ca7d641b3430" name="IndicacionesExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42deafd0-7aed-4010-b52b-8b61f610fb39" />
+          </property>
+          <property Id="23bac3b1-40be-4ca8-ab20-3a3f3ed88cfe" name="DNI" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4bb41c5c-df07-428a-bb7e-c22caa8e3a91" />
+          </property>
+          <property Id="625e513f-9e38-4f8c-8dd9-ca1fc296a8ea" name="EstadoExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5cc7d53a-34c3-4682-881d-fe7f80e24ebe" />
+          </property>
+          <property Id="b270c64a-66dc-4f89-9d42-aa10efed0b2a" name="FinalExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cb64bf8b-2d29-4613-a437-18b9d71aa269" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="677fa538-bc63-4246-95b0-cf2748382de8" name="AgregarExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3bb816c4-6999-4764-9239-6ed20dfdbd55" />
+          </operation>
+          <operation Id="2f4eb466-92a9-444b-8db0-0949ac2e6eee" name="ModificarExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3fcc637f-dd05-4074-8257-34a29cd7fab6" />
+          </operation>
+          <operation Id="538bcc50-af22-4241-83db-3aa4ee0c5c2c" name="VisualizarExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4a78e11b-7cc6-49d1-b90c-97bd72d355e1" />
+          </operation>
+          <operation Id="844cb9cd-b387-45bc-ab65-f59d390fb22c" name="GenerarRegistroExamen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e43305c6-2ea6-4bd8-a602-c554193100e9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b1df6e43-f046-42b6-9e31-a72178610af4" name="PreguntaBalotario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="21dc0118-16c8-4258-a056-954ff250420a" />
+        <ownedAttributesInternal>
+          <property Id="bf8f2787-d73b-4fe7-afea-1a29183d5f20" name="CodigoPregunta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="61c6c4d8-0608-43ab-93dc-c51a4035bc30" />
+          </property>
+          <property Id="0b96868f-e334-440d-b906-f10f0c0cb101" name="CodigoBalotario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="51888d15-b07f-413a-a439-259635b8e5b4" />
+          </property>
+          <property Id="dccce985-725a-4748-90dd-653818ce9798" name="Pregunta" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9c550f1b-0e49-4bcd-ad9f-59e8ede3c9a5" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="36e07cc6-6aa8-403b-bf51-86213b734cdb" name="ModificarPregunta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="484b8515-40a7-4660-a1d8-6c7bf15033b5" />
+          </operation>
+          <operation Id="ffa95ae2-b3e3-42f1-acf3-b978070d28f2" name="EliminarPregunta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="13365dc8-714f-45f0-b215-78c452c3fed9" />
+          </operation>
+          <operation Id="0260b552-31fb-4edf-85b1-8ee194ba49fd" name="AgregarPregunta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d442a0a0-c0e4-48a7-bbb1-c5d7969eb6eb" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="711081c7-0d05-4eec-809e-d8225cc52497" name="PreguntaExamen" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a13df668-3d6c-4927-88fc-25d677a8227f" />
+        <targetEnds>
+          <association Id="b717f93e-964c-4f60-afce-9d6b2266b4f3" isDerived="false" sourceEndRoleName="PreguntaExamen" targetEndRoleName="MultiOpcion" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d721480e-67a4-4bbf-8e4b-3c1c70b1b0e4" LastKnownName="MultiOpcion" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="da7a2c50-09bd-4a6b-8ec7-d9b26f41c5c9" name="PreguntaExamen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5101bb3c-35e1-4621-b043-227233b1b318" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="509ebdbf-0098-49a3-96fc-9934a3ba4248" name="MultiOpcion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="52e78f27-63a1-4334-9e00-66aefe7212eb" name="Lower" value="N">
+                      <elementDefinition Id="b9ee5b12-ced6-4ba0-b6b1-0d05dfb00a32" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="230c19b2-b3c4-47f0-b506-f3713218e2e8" name="Upper" value="N">
+                      <elementDefinition Id="63bf1e49-6c27-400b-baeb-7201176f225b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="df7dc167-bc6d-439c-a6f3-09a91203de0b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3ece249a-c921-4ace-9bdf-5e6eb71d552f" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="4e50b13c-40ee-4617-b9c3-da21d3139e2b" name="CodigoPregunta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b78cd61b-85b0-45b8-9d83-16a7c92741b5" />
+          </property>
+          <property Id="b3a173dd-1d75-4e7e-b865-3a34904520dd" name="CodigoExamen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="413fab98-cd22-4792-8712-49cc4e538e6f" />
+          </property>
+          <property Id="b99adf2b-705a-4106-b7b7-3c8c3519a72b" name="Pregunta" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="87351e37-ad13-46b3-8ce0-26377582ed4b" />
+          </property>
+          <property Id="790158c6-4971-4bf1-9998-47734f366837" name="Respuesta" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="01de7b0c-0427-4a2f-8ae0-d730ac346553" />
+          </property>
+          <property Id="42211dfe-9450-4d85-ad2c-7c6ede0078f4" name="Puntaje" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7b3768da-8655-4d60-976c-b4f5510e38d7" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="42f17308-c87d-408e-88de-ca652f27efdf" name="AgregarPregunta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="62ccddd4-6180-4cc4-8475-7454aca978b6" />
+          </operation>
+          <operation Id="018c9363-68ee-47a7-a62a-0d2df8e6bf37" name="ModificarPregunta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="02bc2245-9d02-4301-8462-0ebd26a3921e" />
+          </operation>
+          <operation Id="800105e3-aeff-4194-b0e3-6410f72ed9ab" name="EliminarPregunta" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="107f89b3-19b0-466e-87ba-7bb13263ecef" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d721480e-67a4-4bbf-8e4b-3c1c70b1b0e4" name="MultiOpcion" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dfe98315-ec43-45b5-8b9c-2c8c8304bf16" />
+        <ownedAttributesInternal>
+          <property Id="610d8a4a-3bba-4a10-8ba8-ba5052c23f63" name="CodigoOpcion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="952d898f-1c62-4af4-b529-50c5e8a8593b" />
+          </property>
+          <property Id="c9c1c5af-59e8-4952-ab8e-8dd8fd842c28" name="CodigoPregunta" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a02d93b7-d1f2-4617-9be2-bd8ccf0b1fa2" />
+          </property>
+          <property Id="fc3c7213-3f7e-49d0-9e17-acc1643d72d5" name="Opcion" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e56f97e0-88ee-40ce-82ee-4642a7a08fcd" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c3411068-0b2c-4cd0-abd3-42d6e4fa0172" name="AgregarOpcion" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="46bd739b-b16e-41eb-b539-aba0b53a483b" />
+          </operation>
+          <operation Id="0a90f004-c5b0-486a-8771-b86dc0131f24" name="ModificarOpcion" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="65713583-ae7c-4ee8-8c5b-48fca1c09494" />
+          </operation>
+          <operation Id="be0c6824-82ba-49d7-95d2-58f18215bc77" name="EliminarOpcion" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b4cbc63d-f091-45af-8ad2-eaed9985d75c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="bd551e9b-9bdb-4cb5-91ba-86404aad4d84" name="ProyectoExamen">
+    <elementDefinition Id="4a1bdbbe-c3c5-4bff-bb1f-6c2a027296c6" />
+  </package>
+</logicalClassDesignerModel>
